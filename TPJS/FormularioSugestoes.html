@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criação de Novo Jogo</title>
+    <link rel="stylesheet" type="text/css" href="Estilo.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#">Memória</a></li>
+            <li><a href="#">Jogo da Velha</a></li>
+            <li><a href="#">Labirinto</a></li>
+            <li><a href="#">Adivinhe o Número</a></li>
+            <li><a href="#">Formulário de Sugestões</a></li>
+          </ul>
+        </nav>
+      </header>
+    <h1>Formulário de Sugestões</h1>
+    <p>Quer ajudar nosso site a crescer? Diga quais jogos você quer ver aqui!</p>
+
+    <form id="Form">
+        <div>
+            <label for="name">Nome <span class="required">(obrigatório)</span></label>
+            <input type="text" id="name" placeholder="Digite seu nome" required>
+        </div>
+        <div>
+            <label for="email">E-mail <span class="required">(obrigatório)</span></label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div>
+            <label for="game">Jogo Sugerido <span class="required">(obrigatório)</span></label>
+            <input type="text" id="game" placeholder="Digite o nome do jogo sugerido" required>
+        </div>
+        <div>
+            <label for="subscribe">Receber atualizações por e-mail</label>
+            <input type="checkbox" id="subscribe">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="FormularioSugestoes.js"></script>
+<footer>
+<p>Govanna @2023 – Todos os direitos reservados</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/*Memória*/
+
+.card {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgb(19, 1, 24);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    justify-items: center;
+  }  
+
+.card.flipped {
+    background-color: var(--card-color);
+}
+
+.card.matched {
+    background-color: #2ecc71;
+}
+
+.card.wrong {
+    background-color: #e74c3c;
+}
+
+.card[data-card="1"] {
+    --card-color: purple;
+}
+
+.card[data-card="2"] {
+    --card-color: blue;
+}
+
+.card[data-card="3"] {
+    --card-color: yellow;
+}
+
+.card[data-card="4"] {
+    --card-color: pink;
+}
+
+.card[data-card="5"] {
+    --card-color: orange;
+}
+
+.card[data-card="6"] {
+    --card-color: magenta;
+}
+
+/*Jogo da velha*/
+
+.velha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.celula {
+    border: 2px solid rgb(19, 1, 24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.X {
+    color: red;
+}
+
+.O {
+    color: blue;
+}
+
+/*Labirinto*/
+
+.maze {
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgb(19, 1, 24);
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.cell {
+    border: 1px solid rgb(19, 1, 24);
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.cell.start {
+    background-color: green;
+}
+
+.cell.end {
+    background-color: red;
+}
+
+.cell.wall {
+    background-color: black;
+}
+
+.cell.path {
+    background-color: lightgray;
+}
+
+.cell.trap {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.cell.trap:hover {
+    background-color: orange;
+}
+
+.game-over-message {
+    display: none;
+    font-size: 24px;
+    color: red;
+    margin-top: 10px;
+}
+
+.victory-message {
+    display: none;
+    font-size: 24px;
+    color: green;
+    margin-top: 10px;
+}
+
+/*Advinhe o número/Formulário*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+input[type="text"], button {
+    margin: 0 5px;
+}
+
+button, #result {
+    margin-bottom: 10px;
+  }
+  
+  input, button {
+    width: 200px;
+    height: 40px;
+  }
+  
+  button {
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+body {
+    background-color: #efdef6;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    justify-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+p {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    justify-items: center;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  header, footer {
+    background-color: purple;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+  }
+
+  .required::after {
+    content: "*";
+    color: red;
+}
